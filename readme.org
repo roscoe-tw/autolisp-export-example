@@ -1,0 +1,40 @@
+* big5                                                             :noexport:
+  #+begin_src lisp :tangle org-export-big5.lsp :noweb yes :padline no 
+    ;;;; -*- encoding:big5 -*-
+    (print "Big5 字碼")
+    <<this-is-test>>
+  #+end_src
+* utf-8                                                            :noexport:
+  #+begin_src lisp :tangle org-export-utf-8.lsp :noweb yes
+    (print "UTF-8 字碼")
+    <<this-is-test>>
+  #+end_src
+* test                                                             :noexport:
+  #+NAME: this-is-test
+  #+begin_src lisp
+    (print "這是一個測試，許功蓋大成功!!")
+  #+end_src
+* org-file-export.org 
+  #+begin_src org :tangle org-file-export.org 
+    ,* big5
+    ,#+begin_src lisp :tangle org-export-big5.lsp :noweb yes :padline no
+      ;;;; -*- encoding:big5 -*-
+      (print "Big5 字碼")
+      <<this-is-test>>
+    ,#+end_src
+    ,* utf-8
+    ,#+begin_src lisp :tangle org-export-utf-8.lsp :noweb yes
+      (print "UTF-8 字碼")
+      <<this-is-test>>
+    ,#+end_src
+    ,* test
+    ,#+NAME: this-is-test
+    ,#+begin_src lisp
+    (print "這是一個測試，許功蓋大成功!!")
+    ,#+end_src
+  #+end_src
+** 原始檔                                                          :noexport:
+- [[file+emacs:org-file-export.org][org-file-export.org]]
+* 已輸出的檔案
+- [[file+emacs:org-export-big5.lsp][org-export-big5.lsp]]
+- [[file+emacs:org-export-utf-8.lsp][org-export-utf-8.lsp]]
