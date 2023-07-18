@@ -1,0 +1,16 @@
+* big5
+#+begin_src lisp :tangle org-export-big5.lsp :noweb yes :padline no
+  ;;;; -*- encoding:big5 -*-
+  (print "Big5 字碼")
+  <<this-is-test>>
+#+end_src
+* utf-8
+#+begin_src lisp :tangle org-export-utf-8.lsp :noweb yes
+  (print "UTF-8 字碼")
+  <<this-is-test>>
+#+end_src
+* test
+#+NAME: this-is-test
+#+begin_src lisp
+(print "這是一個測試，許功蓋大成功!!")
+#+end_src
